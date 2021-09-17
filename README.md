@@ -16,7 +16,7 @@ Below is the newest addition to the `auto-sklearn` payload. It mainly includes t
 
 ## How to run
 
-* You can click on the following button to launch the notebook on Binder and get access to the same notebook
+* You can click on the following button to launch the notebook on Binder: 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/qarnot/qarnot-automl-binder/HEAD?urlpath=%2Ftree%2Fautoml.ipynb).
 
 * You should have the following page load in your browser 
