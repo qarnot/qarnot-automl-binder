@@ -6,11 +6,10 @@ Below is the newest addition to the `auto-sklearn` payload. It mainly includes t
 
 ## Contents addition
 
-* `binder`: contains all the necessary files to run the notebook on Binder:
-  * `automl.ipynb`: notebook with graphical interface to launch the task on Qarnot.
-  * `postBuild`: post build file specific to Binder, used to set the notebook as trusted on launch.
-  * `requirements.txt`: pip requirements file of python modules needed for the use case.
-  * `run_qarnot.py`: Python script for launching the task through the Qarnot SDK. Will be executed through the notebook.
+* `automl.ipynb`: notebook with graphical interface to launch the task on Qarnot.
+* `postBuild`: post build file specific to Binder, used to set the notebook as trusted on launch.
+* `requirements.txt`: pip requirements file of python modules needed for the use case.
+* `run_qarnot.py`: Python script for launching the task through the Qarnot SDK. Will be executed through the notebook.
 * Here are links to a couple datasets that you can download on your end and upload to the binder session once it is running:
   * [phpH4DHsK.csv](https://www.openml.org/data/get_csv/1590940/phpH4DHsK) : Data that contains recordings of five people performing different activities. Each person wore four sensors (tags) while performing the same scenario five times. The problem consists of classifying the activity type for each entry given the collected sensor data (from 8 different types: walking, falling; sitting, etc...). The target column is **Class**
   * [BNG_wine.csv](https://www.openml.org/data/get_csv/150675/BNG_wine.arff) : Data that contains various information about wine samples like alcohol percentage, color intensity, Malic acid and more. The goal is to classify the wine quality as being either a 1, 2 or 3. The target column for is **class**
