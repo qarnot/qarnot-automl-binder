@@ -30,7 +30,6 @@ def submit_task(param_dict):
         task.results = output_bucket
 
         # Fill in task constants from the notebook form
-        task.constants['DOCKER_TAG'] = "v2"
         task.constants['TARGET_COL'] = param_dict['target']
         task.constants['TOTAL_TIME_LIMIT'] = param_dict['total_time']
         task.constants['PER_RUN_TIME_LIMIT'] = param_dict['per_run_time']
