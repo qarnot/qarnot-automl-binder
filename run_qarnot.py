@@ -21,12 +21,12 @@ def submit_task(param_dict):
 
         # Create an input bucket and attach it to the task
         logger.debug("Provisionning input bucket...")
-        input_bucket = conn.create_bucket('automl-binder-input')
+        input_bucket = conn.create_bucket('automl-binder-in')
         input_bucket.sync_directory('input_binder/')
         task.resources.append(input_bucket)
 
         # Create a result bucket and attach it to the task
-        output_bucket = conn.create_bucket('automl-binder-output')
+        output_bucket = conn.create_bucket('automl-binder-out')
         task.results = output_bucket
 
         # Fill in task constants from the notebook form
