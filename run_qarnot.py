@@ -17,16 +17,16 @@ def submit_task(param_dict):
         conn = qarnot.Connection(client_token=param_dict['token'])
 
         logger.debug("Creating task...")
-        task = conn.create_task('automl-binder', 'auto-sklearn-cluster', int(param_dict['nodes']))
+        task = conn.create_task(param_dict['task'], 'auto-sklearn-cluster', int(param_dict['nodes']))
 
         # Create an input bucket and attach it to the task
         logger.debug("Provisionning input bucket...")
-        input_bucket = conn.create_bucket('automl-binder-input')
+        input_bucket = conn.create_bucket(param_dict['in_bucket'])
         input_bucket.sync_directory('input_binder/')
         task.resources.append(input_bucket)
 
         # Create a result bucket and attach it to the task
-        output_bucket = conn.create_bucket('automl-binder-output')
+        output_bucket = conn.create_bucket(param_dict['out_bucket'])
         task.results = output_bucket
 
         # Fill in task constants from the notebook form
